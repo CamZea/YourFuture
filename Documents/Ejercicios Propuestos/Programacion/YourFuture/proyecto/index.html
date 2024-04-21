@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <script defer src="js/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    </head>
+    <style>
+         body {
+         font-family: "Kumbh Sans", sans-serif;
+         color: aliceblue;
+         background-color: rgb(12, 11, 11);
+    }
+    </style>
+<body>
+    
+        <section class="container-orientation bg-black-500">
+       
+                <div  class="flex grid grid-rows-2 grid-cols-2 gap-4 mr-10 ml-12 mt-8 bg-black-500">
+                    <div id="img-orientation" >
+                        <img src="assets/orientacion.jpg" alt="" width="560"  >
+                    </div>
+                    <div class="container-orientation ">
+                        <h3 class="text-lg font-bold">Orientación Profesional</h3>
+                        <p class="mt-5 font-light">En esta sección, te ofrecemos orientación profesional personalizada para ayudarte a encontrar tu camino ideal. 
+                            A través de un proceso de autodescubrimiento y análisis de tus aptitudes, intereses y valores, te guiaremos en la elección de la carrera
+                            universitaria o técnica que mejor se ajuste a tu perfil. </p>
+                            <div class="flex justify-center gap-9 mt-5">
+                                <button   id="btn-questions" type="button" class="border border-white   hover:bg-yellow-600 p-2 mt-6 btn-md text-white  rounded " ><i class="fa-regular fa-question mr-3" style="color: #FFD43B;"></i>  Preguntas Frecuentes</button>
+                                
+                                <button id="btn-doaquestion" type="button" class="border border-white hover:bg-yellow-600 p-2 mt-6 btn-md text-white  rounded "><i class="fa-regular fa-comment mr-3" style="color: #FFD43B;"></i>  Hacer una pregunta</button>
+                            </div>
+
+                    </div>
+                   
+                    <div id="img-foro" class="mt-6" >
+                        <img src="assets/foro.jpg" alt="" width="560" >
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mt-6">Foro </h3>
+                        <p class="mt-5 font-semibold" > ¡Bienvenidos al foro de estudiantes!</p>
+                        <p class="mt-5 font-light">
+                            Este espacio está diseñado para que ustedes, los estudiantes, puedan ayudarse entre sí 
+                            y compartir consejos, ideas y experiencias 
+                        </p>
+                        <div class="flex justify-center gap-9 mt-5">
+                            <button id="btn-" type="button" class="border border-white  hover:bg-yellow-600 p-2 mt-6 btn-md text-white  rounded "><i class="fa-solid fa-hand-point-up mr-3" style="color: #FFD43B;"></i>   Quiero conversar</button>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+           <footer class="border-white mt-9 ">
+            <div class="bg-yellow-500  bg-opacity-90 flex flex-wrap">
+                <div class=" bg-yellow-400 bg-opacity-80 p-6 rounded-md mx-auto  max-w-2xl grow">
+                  <h2 class="font-bold text-xl">Iniciar sesión</h2>
+                  <p class="text-md "> Obtener novedades exclusivas sobre becas, cursos, etc.</p>
+                  <form action="" class="mt-2">
+                    <div class=" borderline-none">
+                      <input
+                        class="px-2 py-3 w-full border border-black rounded-md outline-none"
+                        type="email"
+                        name="email"
+                        placeholder="Ingresa tu correo"
+                      
+                      />
+                    </div>
+                    <div class="flex mt-3">
+                      <input type="checkbox" class="w-9 mr-5" />
+                      <p>
+                        Yo confirmo ser mayor de 15 años y estar de acuerdo con los
+                        Términos y Condiciones y Política de Privacidad. También estoy
+                        de acuerdo con unirme a la comunidad.
+                      </p>
+                    </div>
+                  
+                  </form>
+                  <div class="flex justify-center gap-9 mt-4">
+                    <button id="btn-login" type="button" class="border border-none bg-black  hover:bg-white-600 p-2 mt-6 btn-md text-white  rounded-md ">Unirme a la comunidad</button>
+                </div>
+                  
+                </div>
+                
+              </div>
+             
+            
+           </footer>
+     
+ 
+</body>
+</html>
