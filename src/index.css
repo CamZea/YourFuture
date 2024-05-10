@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:hover .bg-transparent + .bg-green-500 {
+    opacity: 1;
+  }
