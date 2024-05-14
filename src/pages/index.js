@@ -1,5 +1,4 @@
-export {default as HomePage} from "./Home"
-export {default as CarrerasPage} from "./Carreras"
+
 export {default as NosotrosPage} from "./Nosotros"
 
 export {default as CienciaSaludPage} from "./CienciaSalud"
@@ -12,3 +11,8 @@ export {default as MedicinaPage} from "./CarrerasPregrado/Medicina"
 export {default as BiologiaMarinaPage} from "./CarrerasPregrado/Biologiamarina"
 
 
+export {default as HomePage} from "./Home";
+export {default as LoginPage} from "./Login"
+export {default as SignUpPage} from "./SignUp"
+export {default as CareersPage} from "./Carreras"
+export {default as CommunityPage} from "./Community"

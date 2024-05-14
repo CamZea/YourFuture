@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage, 
-    CarrerasPage,
+import {  SignUpPage, LoginPage, CareersPage, CommunityPage, HomePage } from "../pages";
+import { 
     AgronomiaPage,
     AdministracionPage,
     MedicinaPage,
@@ -20,7 +20,6 @@ export default function Router() {
             <Routes>
 
                 <Route path="/home" element={<HomePage />} />
-                <Route path="/carreras" element={<CarrerasPage />} />
                 <Route path="/carreraspregrado/agronomia" element={<AgronomiaPage />} />
                 <Route path="/carreraspregrado/administracion" element={<AdministracionPage />} />
                 <Route path="/carreraspregrado/medicina" element={<MedicinaPage />} />
@@ -31,6 +30,12 @@ export default function Router() {
                 <Route path="/cienciasalud" element={<CienciaSaludPage />} />
                 <Route path="/ingenierias" element={<IngenieriaPage />} />
                 <Route path="/cienciasbiologicas" element={<CienciaBiologicaPage />} />
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/sign-up" element={<SignUpPage />} />
+                <Route path="/carreras" element={<CareersPage />} />
+                <Route path="/community" element={<CommunityPage />} />
+           
 
 
 

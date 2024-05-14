@@ -37,14 +37,14 @@ function Nosotros() {
                 <img className="w-[60%] " src= {nosotros} alt="" />
             </div>
             <div className="flex h-[60vh] " >
-                <div className="flex bg-violet-700 h-[30vh] mt-[20vh] w-[150vh]  
-                    text-[3.5vh] text-justify items-center text-white " >
-                    <p className="flex p-5">"Hacemos posible que cada uno de
+                <div className="flex bg-yellow-500 h-[30vh] mt-20 w-[150vh]  
+                    text-[3.5vh] text-justify items-center text-white rounded-md" >
+                    <p className="flex p-5 font-cormorant">"Hacemos posible que cada uno de
                         nuestros estudiantes, en todo el Perú,
                         transforme su vida para siempre"</p>
                 </div>
-                <div className="flex w-full bg-stone-100 h-auto   ">
-                    <div className=" flex flex-col h-full gap-5 p-5 text-justify text-[7px] items-center md:text-[3vh] ">
+                <div className="flex items-center w-full h-[39vh] bg-stone-100  ml-4 mt-9">
+                    <div className=" flex flex-col  gap-3 p-3 text-justify leading-7 text-[20px] mt-3 items-center  ">
                         <p>
                             Bienvenido a Your Future, tu guía definitiva para explorar el mundo de las carreras y descubrir las oportunidades
                             que te esperan en el futuro. En esta plataforma interactiva, encontrarás información detallada sobre una amplia variedad 
@@ -58,18 +58,18 @@ function Nosotros() {
                     </div>
                 </div>
             </div >
-            <div className="flex w-full h-[70vh] bg-black ">
-                <ul className="flex mt-[6vh] gap-[20px] justify-center w-full md:gap-[4vh]">
+            <div className="flex w-full h-[50vh] bg-slate-800 ">
+                <ul className="flex mt-[6vh] gap-[30px] justify-center w-full md:gap-[10vh]">
                     <li className="flex flex-col items-center p-15" >
-                        <img className="flex w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={user} width={80} alt=""/>
+                        <img className="flex  w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={"src/assets/imagenes/foto-cv.jpg"} width={80} alt=""/>
                         <div className="flex flex-col mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
                             <p>Camila</p>
                             <p>Camila@yourfuture.com</p>
                         </div>
                     </li>
-                    <li className="flex flex-col items-center p-15" >
-                        <img className="flex w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={user} width={80} alt=""/>
-                        <div className="flex flex-col mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
+                    <li className="flex flex-col items-center p-17" >
+                        <img className="flex w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={"src/assets/imagenes/mil-cv.jpg"} width={80} alt=""/>
+                        <div className="flex flex-col  mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
                             <p>Milagros</p>
                             <p>Milagros@yourfuture.com</p>
                         </div>
