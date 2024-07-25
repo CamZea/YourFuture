@@ -25,9 +25,7 @@ export default function Router() {
                 <Route path="/carreraspregrado/administracion" element={<AdministracionPage />} />
                 <Route path="/carreraspregrado/medicina" element={<MedicinaPage />} />
                 <Route path="/carreraspregrado/biologiamarina" element={<BiologiaMarinaPage />} />
-
                 <Route path="/nosotros" element={<NosotrosPage />} />
-
                 <Route path="/cienciasalud" element={<CienciaSaludPage />} />
                 <Route path="/ingenierias" element={<IngenieriaPage />} />
                 <Route path="/cienciasbiologicas" element={<CienciaBiologicaPage />} />

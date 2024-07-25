@@ -14,4 +14,4 @@ export const getCarriers = async () => {
         console.error('Error fetching carriers:', error);
         throw error;
     }
-};
+}

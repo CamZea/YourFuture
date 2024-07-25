@@ -31,7 +31,6 @@ function Carreras() {
         fetchData(); // Llama a fetchData cuando el componente se monta
     }, []); 
 
-    
     const handleChange = (event) => {
         const value = event.target.value.toLowerCase();
         setInputValue(value);

@@ -14,41 +14,6 @@ function CienciasBiologicas() {
     const [inputValue,SetInputValue] = useState('')
     const [carrerafilter, SetCarreraFilter] = useState([]); // almacen de carreras ya filtrada
     
-
-    // useEffect(() => {                        /// extraer la informacion de la base de datos y guardalor en SetCarreras y setCarrera
-    //     const CarrerasRef = ref(database, 'Carreras');
-    //     get(CarrerasRef)
-    //         .then((snapshot) => {
-    //             if (snapshot.exists()) {
-    //                 const CarrerasArray = Object.entries(snapshot.val()).map(([id, data]) => ({
-    //                     id,
-    //                     ...data,
-    //                 }));
-    //                 const CarrerasBiologicas = CarrerasArray.filter((carrera) => carrera.area === 'biologica');
-    //                 SetCarreraFilter(CarrerasBiologicas);
-    //                 SetCarreras(CarrerasBiologicas)
-    //             } else {
-    //                 console.log("No hay datos disponibles");
-    //             }
-    //         })
-    //         .catch((error) => {
-    //             console.error("Error al obtener datos:", error);
-    //         });
-    // }, []);
-
-    // const handleChange = (event) =>{          
-    //     const value = event.target.value.toLowerCase()
-    //     SetInputValue(value)
-        
-    //     const carrierFiltered = carrerafilter.filter((carrier) => { /// Se realiza el filtro de la variable Carreras de acuerdo al nombre y se almacena en SetCarrera
-    //         const filterByName = carrier.Nombre.toLowerCase().includes(value)
-    //         return filterByName
-    //     })
-
-    //     SetCarreraFilter(carrierFiltered);
-    // }
-
-    
     useEffect(() => {
         const fetchData = async () => {
             try {
