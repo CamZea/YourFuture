@@ -1,9 +1,8 @@
 
 import { useEffect,useState } from "react";
 import { getCarriers } from '../../services/getcarriers';
-
 import { Link } from "react-router-dom";
-
+// Importar imagenes
 import logo from "../../assets/imagenes/logo_transparent.png";
 import lupa from "../../assets/imagenes/lupa.png";
 
@@ -35,11 +34,16 @@ function CienciasBiologicas() {
         const value = event.target.value.toLowerCase()
             SetInputValue(value);
         
-        const carrierFiltered = carrerafilter.filter((carrier) => {
-            return carrier.name.toLowerCase().includes(value);
-        });
+            if (value === '') {
+                // Si el valor está vacío, restablece la lista filtrada a la lista completa de carreras
+                SetCarreraFilter(carriers);
+            } else {
+                const carrierFiltered = carrerafilter.filter((carrier) => {
+                    return carrier.name.toLowerCase().includes(value);
+                });
     
-        SetCarreraFilter(carrierFiltered);
+                SetCarreraFilter(carrierFiltered);
+            }
     }
 
     return (
@@ -95,12 +99,12 @@ function CienciasBiologicas() {
                                             <img className="h-[40vh] w-[45vh] flex bg-cover rounded-[15px]" src={carrier.image} width={250}/>
                                         </div>
                                         <div className="w-full absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-400 rounded-[20px]"></div>
-                                        <div className="absolute inset-0 hover:text-white text-[13px] justify-center items-center text-transparent p-4 text-justify mt-6">
-                                            <p>{carrier.description} </p>
+                                        <div className="absolute inset-0 hover:text-white 
+                                            text-[13px] justify-center items-center text-transparent p-4 text-justify mt-6"><p>{carrier.description} </p>
                                         </div>
                                     </div>
                                     <div className="h-[10vh] w-[40vh] absolute bottom-[2vh] left-[6vh] backdrop-blur-lg rounded-[20px] md:bottom-[1vh]">
-                                        <Link to={`/carreraspregrado/${encodeURIComponent(carrier.name.toLowerCase().replace(/\s+/g, ''))}`}> <h3 className="flex p-4 text-[15px] font-bold text-center">{carrier.Nombre}</h3>
+                                        <Link to={`/carreraspregrado/${encodeURIComponent(carrier.name.toLowerCase().replace(/\s+/g, ''))}`}> <h3 className="flex p-4 text-[15px] font-bold text-center">{carrier.name}</h3>
                                         </Link> 
                                     </div>
                                     

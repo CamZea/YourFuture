@@ -121,7 +121,7 @@ function Carreras() {
                     </div>
                     
                     <div>
-                        <div className="flex bg-cover grid grid-cols-1 gap-6 mx-5 my-3 md:grid md:grid-cols-3"> 
+                        <div className="flex bg-cover grid grid-cols-1 gap-6 mx-5 my-3 md:grid md:grid-cols-4"> 
                             {carrerafilter.map((carrier) => (
                                 <div className="relative h-[50vh] mt-[4vh] gap-10 p-4" key={carrier.id}>
                                     <div className="group relative w-[45vh] overflow-hidden cursor-pointer"> 
@@ -129,7 +129,7 @@ function Carreras() {
                                             <img className="h-[40vh] w-[45vh] flex bg-cover rounded-[15px]" src={carrier.image} alt={carrier.name} />
                                         </div>
                                         <div className="w-full absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-400 rounded-[20px]"></div>
-                                        <div className="absolute inset-0 hover:text-white text-[13px] justify-center items-center text-transparent p-4 text-justify mt-6">
+                                        <div className="absolute inset-0 hover:text-white text-[15px] justify-center items-center text-transparent p-4 text-justify mt-6">
                                             <p>{carrier.description}</p>
                                         </div>
                                     </div>
