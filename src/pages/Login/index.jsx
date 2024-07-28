@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { createUser } from "../../services/auth"
-import {Link} from "react-router-dom";
+
 
 
 export default function Login(){
@@ -17,10 +17,16 @@ export default function Login(){
         [name]: value,
     });
 }
-  const handleSubmit = async(event)=> {
+  const handleSubmit = async (event)=> {
     event.preventDefault();
-    await createUser(values.email, values.password);
+    const result= await createUser(values.email, values.password);
+    if(result){
+      console.log(result.message);
+    }else {
+      console.log('Error al iniciar sesion')
+    }
   };
+
   return (
    <>
    <section className="max-w-md m-auto flex flex-col items-center justify-center h-[100vh]">

@@ -1,57 +1,56 @@
-
-
-//importamos archivos de firebase
-import {
-    createUserWithEmailAndPassword,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-  } from "firebase/auth";
-
-  import { auth } from './firebase_2';
-  export async function createUser(email, password){
+export async function createUser(name, lastname, email, password){
     try {
-        const authentication = await createUserWithEmailAndPassword(
-            auth,
-            email,
-            password
-        )
-        return authentication.user;
-    
-    }catch(error){
-        console.log(error.code);
-        console.log(error.message);
+        const response = await fetch('http://127.0.0.1:8000/api/v1/users/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body:JSON.stringify({
+                name,
+                lastname,
+                email,
+                password,
+                is_super_user:false}),
+            });
+            
+            const data =  await response.json();
+            if (response.ok) {
+                return data
+            }else {
+                console.log(data);
+                return null
+
+            }
+        }catch(error){
+        console.log("Error", error);
         return null;
     }
   }
 
   export async function signIn(email,password){
-    try{
-        const authentication = await signInWithEmailAndPassword(
-            auth,
-            email,
-            password
-        )
-        return authentication.user;
-
-    }catch(error){
-        console.log(error.code);
-        console.log(error.message);
-        return null;
-    }
-  }
-
-
-  export function getCurrentUser(){
-    //promise,no hace falta poner return, tiene resolve, cuando es algo exitoso, y reject en caso de que el user no exista
-    return new Promise ((resolve, reject) => {
-        const observer =  onAuthStateChanged(auth, (user)=> {
-            if(user){
-                resolve(user);
-                
-            } else {
-                reject("User no found")
-            }
+    try {
+        const response= await fetch('http://127.0.0.1:8000/api/v1/login',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password:password,
+            }),
         });
-        return observer;
-    })
+        const data =  await response.json();
+        if (response.ok) {
+            return data
+        }else {
+            console.log(data);
+            return null
+        }
+    }catch(error){
+     console.log("Error", error);
+     return null;
+    }
 }
+  
+
+

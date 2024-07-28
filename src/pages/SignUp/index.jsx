@@ -6,7 +6,8 @@ import { createUser } from '../../services/auth'
 export default function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
   const [values, setValues] = useState({
-    fullName:"",
+    name:"",
+    lastname:"",
     email:"",
     password:"",
   })
@@ -24,9 +25,13 @@ export default function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-
-    await createUser(values.email, values.password);
+    const result= await createUser(values.name, values.lastname, values.email, values.password);
     setIsLoading(false);
+    if (result) {
+      console.log('Usuario creado exitosamente');
+    } else {
+      console.log('Error al registrar el usuario');
+    }
   };
 
 
@@ -38,10 +43,18 @@ export default function SignUp() {
       <input 
       className=" border px-3 py-2 rounded-md w-full"
       type="text"
-      name="fullName"
-      value={values.fullName}
+      name="name"
+      value={values.name}
       onChange={handleInputChange}
-      placeholder="Ingrese su nombre completo"/>
+      placeholder="Ingrese su nombre"/>
+        <input 
+      className=" border px-3 py-2 rounded-md w-full"
+      type="text"
+      name="lastname"
+      value={values.lastname}
+      onChange={handleInputChange}
+      placeholder="Ingrese su apellido"/>
+
 
       <input 
       className=" border px-3 py-2 rounded-md w-full mt-4"
@@ -58,6 +71,8 @@ export default function SignUp() {
       value={values.password}
       onChange={handleInputChange}
       placeholder="Ingrese su contraseña"/>
+
+  
 
 <div className="my-5">
                   <button

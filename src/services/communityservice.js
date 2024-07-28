@@ -1,30 +1,37 @@
-import { db } from "./firebase_2";
-import { collection, addDoc, getDocs } from "firebase/firestore";
-
 
 // Función para agregar comunidades a la base de datos
 export async function addComunidades(nombre) {
   try {
-    const docRef = await addDoc(collection(db, "comunidades"), {
-      Avatar: '', 
-      Nombre: nombre,
+    const response = await fetch('http://127.0.0.1:8000/api/v1/comunidades/', {
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: nombre,
+        status: ""
+      })
 
     });
-    console.log("Documento creado con ID: ", docRef.id);
-    return docRef;
+   if (!response.ok){
+    throw new Error('Error en la solicitud: ' + response.statusText);
+   }
+   const newCommunity= await response.json();
+   console.log("Document created with ID: ", newCommunity.id);
+   return newCommunity;
   } catch (e) {
     console.error("Error al agregar comunidad ", e);
   }
 }
 
 // Función para obtener comunidades de la base de datos
-export async function fetchComunidades() {
+export async function getComunidades() {
   try {
-    const querySnapshot = await getDocs(collection(db, "comunidades"));
-    const newData = querySnapshot.docs.map(doc => ({
-      ...doc.data(), 
-      id: doc.id
-    }));
+    const response = await fetch('http://127.0.0.1:8000/api/v1/comunidades/');
+    if (!response.ok){
+      throw new Error('Error en la solicitud: '+ response.statusText);
+    }
+    const newData= await response.json();
     console.log("Comunidades", newData);
     return newData;
   } catch (e) {

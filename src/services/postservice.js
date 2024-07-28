@@ -1,29 +1,42 @@
-import { db } from "./firebase_2";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+
 
 export async function getPost() {
     try {
-      const querySnapshot = await getDocs(collection(db, "posts"));
-      const newData = querySnapshot.docs.map(doc => ({
-        ...doc.data(), 
-        id: doc.id
-      }));
-      console.log("Post", newData);
-      return newData;
+      const response = await fetch('http://127.0.0.1:8000/api/v1/foro/');
+      if (!response.ok){
+        throw new Error('Error en la solicitud: '+ response.statusText)
+
+      }
+      const newData =await response.json();
+      return newData
+      
     } catch (e) {
       console.error("Error al obtener post ", e);
     }
   }
  
+  //Crear nuevo post
 export async function createPost(post){
     try {
-        const docRef = await addDoc(collection(db, "posts"), {
-          Descripcion:post,
-          Fecha:"",
+        const response = await fetch('http://127.0.0.1:8000/api/v1/foro/' ,{
+          method: 'POST',
+          headers:{
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name:"",
+            user:"",
+            post: post,
+            
+          }),
         
         });
-        console.log("Document written with ID: ", docRef.id);
-        return docRef;
+
+        if (!response.ok){
+          throw new Error('Error en la solicitud:' + response.statusText)
+        }
+        const newPost= await response.json();
+        return newPost;
       } catch (e) {
         console.error("Error adding document: ", e);
       }
