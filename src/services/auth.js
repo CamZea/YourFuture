@@ -1,6 +1,6 @@
 export async function createUser(name, lastname, email, password){
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/v1/users/', {
+        const response = await fetch('https://babckend-yf-3.onrender.com/api/v1/users/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export async function createUser(name, lastname, email, password){
 
   export async function signIn(email,password){
     try {
-        const response= await fetch('http://127.0.0.1:8000/api/v1/login',{
+        const response= await fetch('https://babckend-yf-3.onrender.com/api/v1/login',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

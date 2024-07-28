@@ -2,7 +2,7 @@
 
 export async function getPost() {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/v1/foro/');
+      const response = await fetch('https://babckend-yf-3.onrender.com/api/v1/foro/');
       if (!response.ok){
         throw new Error('Error en la solicitud: '+ response.statusText)
 
@@ -18,7 +18,7 @@ export async function getPost() {
   //Crear nuevo post
 export async function createPost(post){
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/v1/foro/' ,{
+        const response = await fetch('https://babckend-yf-3.onrender.com/api/v1/foro/' ,{
           method: 'POST',
           headers:{
             'Content-Type': 'application/json',

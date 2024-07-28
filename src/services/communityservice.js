@@ -2,7 +2,7 @@
 // Función para agregar comunidades a la base de datos
 export async function addComunidades(nombre) {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/v1/comunidades/', {
+    const response = await fetch('https://babckend-yf-3.onrender.com/api/v1/comunidades/', {
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export async function addComunidades(nombre) {
 // Función para obtener comunidades de la base de datos
 export async function getComunidades() {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/v1/comunidades/');
+    const response = await fetch('https://babckend-yf-3.onrender.com/api/v1/comunidades/');
     if (!response.ok){
       throw new Error('Error en la solicitud: '+ response.statusText);
     }
