@@ -127,7 +127,7 @@ function Carreras() {
                     
                     <div>
 
-                        <div className="flex bg-cover grid grid-cols-1 gap-6 mx-5 my-3 md:grid md:grid-cols-4"> 
+                        <div className="flex bg-cover grid-cols-1 gap-6 mx-5 my-3 md:grid md:grid-cols-4"> 
                             {carrerafilter.map((carrier) => (
                                 <div className="relative h-[50vh] mt-[4vh] gap-10 p-4" key={carrier.id}>
                                     <div className="group relative w-[45vh] overflow-hidden cursor-pointer"> 
