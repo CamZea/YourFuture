@@ -6,7 +6,7 @@ import user from "../../assets/imagenes/user.jpg"
 
 function Nosotros() {
     return (
-      <>
+    <>
         <main >
             <div className="flex mt-4 mr-4">
                     <img src= {logo} width={110}  alt="" />
@@ -86,8 +86,7 @@ function Nosotros() {
                 </div>
             </footer>
         </main>
-      </>
+    </>
     );
-  }
-  
-  export default Nosotros;
+}
+export default Nosotros;
