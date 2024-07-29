@@ -1,11 +1,8 @@
 import { Footer, NavBar } from "../../components"
 import { Link } from "react-router-dom";
 import derecho from "../../assets/imagenes/derecho.jpg";
-import biologia from "../../assets/imagenes/biologia.jpg";
+import CienciasBiologicas from "../../assets/imagenes/biologia.jpg";
 import salud from "../../assets/imagenes/medicina.jpg";
-
-
-
 
 function Home(){
     return (
@@ -75,18 +72,11 @@ function Home(){
                                 </div>
                             </li>
                         </ul>
-
                 </div>
-              </li>
-              <li className="flex flex-col">
-                <img className="h-[30vh] bg-cover p-4 " src={biologia} alt="" />
-                <div className="flex flex-col ml-4">
-                  <h2 className="text-sm font-semibold">Ciencias Biologicas</h2>
-                  <Link to={"/cienciasbiologicas"}>
-                    <button className="text-[#EECF60] mt-2 font-semibold text-[15px] hover:bg-yellow-200 hover:text-black transition-all ease-in-out duration-300 rounded-[5px]  ">
-                      Ver área →
+                <Link to={"/Carreras"}>
+                    <button className="flex w-full justify-center">
+                        <span className="border border-[#EECF60] w-[100px] text-[#EECF60] p-1 font-semibold text-[15px] hover:bg-yellow-300 hover:text-black transition-all ease-in-out duration-300">Ver más →</span>
                     </button>
-
                 </Link>
             </div>
 
