@@ -36,9 +36,17 @@ function Nosotros() {
             <div className="flex text-[4vh] justify-center  ">
                 <h2 className="text-[#9463C6]">¿Qué somos?</h2>
             </div>
-            <div className="flex w-full h-[50vh] justify-center p-5 mx-[6vh] md:h-[60vh]">
-                <img className="w-[40%] rounded-lg md:h-[50vh]" src= {nosotros} alt="" />
-                <div className="flex flex-col h-[15%] gap-5 p-5 text-justify text-[8px] items-center md:text-[2vh] md:h-[50vh] md:items-center md:my-12 ">
+
+            <div className="flex h-[60vh] " >
+                <div className="flex bg-yellow-500 h-[30vh] mt-20 w-[150vh]  
+                    text-[3.5vh] text-justify items-center text-white rounded-md" >
+                    <p className="flex p-5 font-cormorant">"Hacemos posible que cada uno de
+                        nuestros estudiantes, en todo el Perú,
+                        transforme su vida para siempre"</p>
+                </div>
+                <div className="flex items-center w-full h-[39vh] bg-stone-100  ml-4 mt-9">
+                    <div className=" flex flex-col  gap-3 p-3 text-justify leading-7 text-[20px] mt-3 items-center  ">
+
                         <p>
                             Una guía definitiva para explorar el mundo de las carreras y descubrir las oportunidades
                             que te esperan en el futuro. En esta plataforma interactiva, encontrarás información detallada sobre una amplia variedad 
@@ -50,6 +58,7 @@ function Nosotros() {
                             trayectoria profesional, aquí encontrarás todo lo que necesitas para dar el siguiente paso en tu viaje hacia el éxito.
                         </p>
                 </div>
+
             </div>
             <div className="flex items-center justify-center md:h-[20vh]">
                 <div className="flex  h-[12vh] w-[70%] bg-[#9463C6] my-[20px] rounded-lg items-center justify-center text-white  ">
@@ -64,16 +73,18 @@ function Nosotros() {
             </div>
             <div className="flex w-full h-[70vh] ">
                 <ul className="flex mt-[6vh] gap-[20px] justify-center w-full md:gap-[4vh]">
+
+         
                     <li className="flex flex-col items-center p-15" >
-                        <img className="flex w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={user} width={80} alt=""/>
+                        <img className="flex  w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={"src/assets/imagenes/foto-cv.jpg"} width={80} alt=""/>
                         <div className="flex flex-col mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
                             <p>Camila</p>
                             <p>Camila@yourfuture.com</p>
                         </div>
                     </li>
-                    <li className="flex flex-col items-center p-15" >
-                        <img className="flex w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={user} width={80} alt=""/>
-                        <div className="flex flex-col mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
+                    <li className="flex flex-col items-center p-17" >
+                        <img className="flex w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={"src/assets/imagenes/mil-cv.jpg"} width={80} alt=""/>
+                        <div className="flex flex-col  mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
                             <p>Milagros</p>
                             <p>Milagros@yourfuture.com</p>
                         </div>
