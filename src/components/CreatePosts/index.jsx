@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getPost, createPost } from "../../services/postservice";
 import profile  from "../../assets/foro/profiles/user_8872036.png";
+import profile2 from "../../assets/foro/profiles/user_7454510.png"
 import cursoIA from "../../assets/imagenes/curso-IA.jpg";
 import UpdatePost from "../EditPost";
 
@@ -109,7 +110,7 @@ export default function CreatePosts(props){
      <div className=" flex p-2  ml-4 mt-4 rounded-md text-[#adadad] hover:text-white hover:bg-gradient-to-r hover:from-[#2d2d2d]  hover:border-r-[#2d2d2d] hover:border-r-[6px] ">
       <div className="ml-6 ">
        <div className=" p-3 border-top  border-top-gray-400 w-65 h-54">
-        <img src="src/assets/foro/profiles/undraw_profile_pic_re_iwgo.svg" className="w-7 h-7 ml-3" alt=""/><button href="" className="text-white text-sm p-2 font-semibold">User0041 </button>
+        <img src={profile2} className="w-7 h-7 ml-3" alt=""/><button href="" className="text-white text-sm p-2 font-semibold">User0041 </button>
        <span className="text text-xs text-gray-500 mt-2 mr-4">. Hace un dia</span>
          </div>
          <div className=" p-3 border-top  border-top-gray-400 w-55 h-54">
