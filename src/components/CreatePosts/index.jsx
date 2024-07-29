@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getPost, createPost } from "../../services/postservice";
-import profile  from "src/assets/foro/profiles/undraw_profile_pic_re_iwgo.svg";
-import cursoIA from "src/assets/imagenes/curso-IA.jpg";
+import profile  from "../../assets/foro/profiles/user_8872036";
+import cursoIA from "../../assets/imagenes/curso-IA";
 import UpdatePost from "../EditPost";
 
 

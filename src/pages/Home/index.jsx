@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import derecho from "../../assets/imagenes/derecho.jpg";
 import CienciasBiologicas from "../../assets/imagenes/biologia.jpg";
 import salud from "../../assets/imagenes/medicina.jpg";
+import imgforo from "../../assets/imagenes/foro.jpg";
+import imgorienta from "../../assets/imagenes/orientacion.jpg";
 
 function Home(){
     return (
@@ -86,7 +88,7 @@ function Home(){
        
        <div  className="grid grid-rows-2 grid-cols-2 gap-4 mr-10 ml-12 mt-8 bg-black-500">
            <div id="img-orientation" >
-               <img src="/src/assets/imagenes/orientacion.jpg" alt="" width="560"  />
+               <img src={imgorienta} alt="" width="560"  />
            </div>
            <div className="container-orientation ">
                <h3 className="text-lg font-bold">Orientación Profesional</h3>
@@ -102,7 +104,7 @@ function Home(){
            </div>
           
            <div id="img-foro" className="mt-6" >
-               <img src="/src/assets/imagenes/foro.jpg" alt="" width="560" />
+               <img src={imgforo} alt="" width="560" />
            </div>
            <div>
                <h3 className="text-lg font-bold mt-6">Foro </h3>
