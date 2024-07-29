@@ -3,7 +3,7 @@ function Ingenieria() {
       <>
         <main >
             <div>
-                <h1>ingenieria</h1>
+                <h1>Ingenierias</h1>
             </div>
         </main>
       </>
