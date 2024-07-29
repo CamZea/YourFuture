@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import { createUser } from '../../services/auth'
+import { createUser } from '../../services/auth';
+import login from "../../assets/imagenes/logo_transparent.png";
+
 
 
 export default function SignUp() {
@@ -38,7 +40,7 @@ export default function SignUp() {
   return (
     <section className="max-w-md m-auto flex items-center justify-center h-[100vh]">
     <div className="bg-white p-6 rounded-md w-full md:w-md">
-    <img src="src/assets/imagenes/logo_transparent.png" alt="" className="w-15"/>
+    <img src={login} alt="" className="w-15"/>
       <form className='my-5' onSubmit={handleSubmit}>
       <input 
       className=" border px-3 py-2 rounded-md w-full"
