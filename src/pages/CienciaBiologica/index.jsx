@@ -1,55 +1,52 @@
 
-import { get ,ref } from "firebase/database";
 import { useEffect,useState } from "react";
-import { database } from "../../services/firebase_2";
-import { Link } from "react-router-dom";
 
+import { getCarriers } from '../../services/getcarriers';
+import { Link } from "react-router-dom";
+// Importar imagenes
+import logo from "../../assets/imagenes/logo_transparent.png";
+import lupa from "../../assets/imagenes/lupa.png";
 
 
 
 function CienciasBiologicas() {
     
-    const [Carreras,SetCarreras] = useState([]); // almacen de carreras totales 
-    
+    const [carriers,SetCarriers] = useState([]); // almacen de carreras totales 
     const [inputValue,SetInputValue] = useState('')
     const [carrerafilter, SetCarreraFilter] = useState([]); // almacen de carreras ya filtrada
     
-
-    useEffect(() => {                        /// extraer la informacion de la base de datos y guardalor en SetCarreras y setCarrera
-        const CarrerasRef = ref(database, 'Carreras');
-        get(CarrerasRef)
-            .then((snapshot) => {
-                if (snapshot.exists()) {
-                    const CarrerasArray = Object.entries(snapshot.val()).map(([id, data]) => ({
-                        id,
-                        ...data,
-                    }));
-                    const CarrerasBiologicas = CarrerasArray.filter((carrera) => carrera.area === 'biologica');
-                    SetCarreras(CarrerasBiologicas);
-                    SetCarreraFilter(CarrerasBiologicas)
-                } else {
-                    console.log("No hay datos disponibles");
-                }
-            })
-            .catch((error) => {
-                console.error("Error al obtener datos:", error);
-            });
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getCarriers();
+                const carrerasBiologicas = data.filter(carrera => carrera.area === 'biologica');
+                SetCarriers(carrerasBiologicas);
+                SetCarreraFilter(carrerasBiologicas);
+                
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setError(error);
+            } 
+        };
+    
+        fetchData();
     }, []);
-
-    const handleChange = (event) =>{          
+    
+    const handleChange = (event) => {
         const value = event.target.value.toLowerCase()
-        SetInputValue(value)
+            SetInputValue(value);
         
-        const carrierFiltered = Carreras.filter((carrier) => { /// Se realiza el filtro de la variable Carreras de acuerdo al nombre y se almacena en SetCarrera
-            const filterByName = carrier.Nombre.toLowerCase().includes(value)
-            return filterByName
-        })
-
-        SetCarreraFilter(carrierFiltered);
+            if (value === '') {
+                // Si el valor está vacío, restablece la lista filtrada a la lista completa de carreras
+                SetCarreraFilter(carriers);
+            } else {
+                const carrierFiltered = carrerafilter.filter((carrier) => {
+                    return carrier.name.toLowerCase().includes(value);
+                });
+    
+                SetCarreraFilter(carrierFiltered);
+            }
     }
-
-    
-    
 
     return (
         <>
@@ -101,15 +98,19 @@ function CienciasBiologicas() {
                                 <div className= " relative h-[50vh] mt-[4vh] gap-10 p-4  " key={carrier.id} >
                                     <div className="group relative w-[45vh] overflow-hidden cursor-pointer"> 
                                         <div className="relative" >
-                                            <img className="h-[40vh] w-[45vh] flex bg-cover rounded-[15px]" src={carrier.url} width={250}/>
+                                            <img className="h-[40vh] w-[45vh] flex bg-cover rounded-[15px]" src={carrier.image} width={250}/>
                                         </div>
                                         <div className="w-full absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-400 rounded-[20px]"></div>
-                                        <div className="absolute inset-0 hover:text-white text-[13px] justify-center items-center text-transparent p-4 text-justify mt-6">
-                                            <p>{carrier.Descripcion} </p>
+                                        <div className="absolute inset-0 hover:text-white 
+                                            text-[13px] justify-center items-center text-transparent p-4 text-justify mt-6"><p>{carrier.description} </p>
                                         </div>
                                     </div>
                                     <div className="h-[10vh] w-[40vh] absolute bottom-[2vh] left-[6vh] backdrop-blur-lg rounded-[20px] md:bottom-[1vh]">
-                                      <Link to={`/carreraspregrado/${encodeURIComponent(carrier.Nombre.toLowerCase().replace(/\s+/g, ''))}`}> <h3 className="flex p-4 text-[15px] font-bold text-center">{carrier.Nombre}</h3> </Link>
+                                        <Link to={`/carreraspregrado/${encodeURIComponent(carrier.name.toLowerCase().replace(/\s+/g, ''))}`}> <h3 className="flex p-4 text-[15px] font-bold text-center">{carrier.name}</h3>
+                                        </Link> 
+
+                                    
+
                                     </div>
                                     
                                 </div>
