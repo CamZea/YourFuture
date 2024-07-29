@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getPost, createPost } from "../../services/postservice";
+import profile  from "src/assets/foro/profiles/undraw_profile_pic_re_iwgo.svg";
+import cursoIA from "src/assets/imagenes/curso-IA.jpg";
 import UpdatePost from "../EditPost";
 
 
@@ -44,7 +46,7 @@ export default function CreatePosts(props){
     <div className=" justify-center  mt-14 ">
     <div className="relative flex justify-center bg-[#333332]  rounded-md ml-6 mt-4 h-[130px] w-[930px] ">
     
-    <img src="/src/assets/foro/profiles/undraw_profile_pic_re_iwgo.svg"  className="  h-[45px] ml-5 mt-4" alt="" />
+    <img src={profile}  className=" h-[45px] ml-5 mt-4" alt="" />
     <div className=" w-full ">
 
     <input 
@@ -86,7 +88,7 @@ export default function CreatePosts(props){
 </div>
 <div id="container-chat" className=" p-4  ml-6 mt-4 rounded-md text-[#adadad] hover:text-white hover:bg-gradient-to-r hover:from-[#2d2d2d]  hover:border-r-[#2d2d2d] hover:border-r-[6px] "> 
       <div className=" p-3 border-top  border-top-gray-400 w-55 h-54">
-        <img src="src/assets/foro/profiles/undraw_profile_pic_re_iwgo.svg" className="w-7 h-7 ml-3" alt=""/><button href="" className="text-white text-sm p-2 font-semibold">User0041 </button>
+        <img src={profile} className="w-7 h-7 ml-3" alt=""/><button href="" className="text-white text-sm p-2 font-semibold">User0041 </button>
         <span className="text text-xs text-gray-500 mt-2 mr-4">. Hace un dia</span>
       </div>
      
@@ -94,7 +96,7 @@ export default function CreatePosts(props){
         <p className="text-white text-sm font-serif">Hola chicos, he encontrado un curso interesante sobre inteligencia artificial.Estoy segura que les va a interesar</p>
         <p className="text-white text-sm font-serif">Aqui abajo les dejo el link.</p>
         <p className="text-white text-sm font-serif">Ya saben, estamos para apoyarnos. Alguien podria recomendarme cursos parecidos?</p>
-        <img src="src/assets/imagenes/curso-IA.jpg" className="mt-4  h-96" />
+        <img src={cursoIA} className="mt-4  h-96" />
       </div>
       <button className=" bg-gray-700  p-2 ml-6 mt-4 rounded-3xl hover:bg-gradient-to-r hover:from-[#A18309] text text-sm  "><svg fill="#fffafe" className="w-[18px] flex ml-2" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M7.975 2c-2.235.116-4.365 1.203-5.82 2.89C.7 6.57 0 8.786 0 11c0 1.938.697 3.816 1.646 5.46.95 1.644 2.19 3.077 3.5 4.394 2.824 2.833 6.08 5.232 9.622 7.09.145.076.32.076.464 0 3.543-1.858 6.798-4.257 9.622-7.09 1.31-1.317 2.55-2.75 3.5-4.393C29.304 14.817 30 12.94 30 11c0-2.22-.7-4.428-2.154-6.11C26.39 3.202 24.26 2.115 22.026 2c-1.516-.078-3.045.286-4.362 1.04-1.097.626-1.975 1.558-2.664 2.614-.69-1.056-1.567-1.988-2.664-2.615C11.02 2.285 9.49 1.92 7.976 2zm.05 1c1.32-.068 2.665.25 3.813.906 1.148.656 2.107 1.652 2.72 2.824.186.36.698.36.885 0 .612-1.172 1.57-2.168 2.72-2.824 1.147-.656 2.49-.974 3.812-.906 1.942.1 3.837 1.062 5.115 2.54C28.37 7.023 29 9 29 11c0 1.73-.628 3.43-1.512 4.96-.885 1.535-2.064 2.904-3.342 4.186-2.686 2.697-5.788 4.975-9.146 6.766-3.358-1.79-6.46-4.07-9.146-6.766-1.278-1.282-2.457-2.65-3.342-4.185C1.628 14.43 1 12.73 1 11c0-2 .63-3.978 1.91-5.46C4.188 4.063 6.083 3.1 8.025 3z"></path></g></svg>Likes</button>
       <button className=" bg-gray-700  p-2 ml-2 mt-4 rounded-3xl hover:bg-gradient-to-r hover:from-[#A18309] text text-sm  "><svg viewBox="0 0 1024 1024" fill="#ffffff" className="w-[18px] flex ml-8" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M285.6 555.2c-41.6 0-76-34.4-76-77.6s34.4-77.6 76-77.6 76 34.4 76 77.6-33.6 77.6-76 77.6zM512.8 555.2c-41.6 0-76-34.4-76-77.6s34.4-77.6 76-77.6 76 34.4 76 77.6-34.4 77.6-76 77.6zM739.2 555.2c-41.6 0-76-34.4-76-77.6s34.4-77.6 76-77.6 76 34.4 76 77.6-34.4 77.6-76 77.6zM307.2 925.6c-5.6 0-12-1.6-17.6-4-12.8-5.6-21.6-17.6-24-31.2l-20-123.2 42.4-9.6 20.8 122.4 132.8-77.6 2.4 45.6-115.2 72c-6.4 3.2-14.4 5.6-21.6 5.6z" fill=""></path><path d="M512 57.6C240 57.6 18.4 235.2 18.4 454.4c0 156 112.8 292 276.8 356l-7.2-52.8C154.4 696.8 64.8 583.2 64.8 454.4 64.8 260.8 265.6 104 512 104s447.2 156.8 447.2 350.4c0 193.6-200.8 350.4-447.2 350.4-13.6 0-57.6-2.4-70.4-3.2l-40.8 39.2c36 6.4 73.6 10.4 111.2 10.4 272 0 493.6-177.6 493.6-396.8S784 57.6 512 57.6z" fill=""></path></g></svg>Comentarios </button>
@@ -132,7 +134,7 @@ export default function CreatePosts(props){
 
   <div id="container-chat" className=" p-2  ml-3 mt-4 rounded-md text-[#adadad] hover:text-white hover:bg-gradient-to-r hover:from-[#2d2d2d]  hover:border-r-[#2d2d2d] hover:border-r-[6px] "> 
       <div className="flex  p-3 border-top  border-top-gray-400 w-65 h-54">
-        <img src="src/assets/foro/profiles/undraw_profile_pic_re_iwgo.svg" className="w-7 h-7 ml-3" alt=""/><button href="" className="text-white text-sm p-2 font-semibold">User0041 </button>
+        <img src={profile} className="w-7 h-7 ml-3" alt=""/><button href="" className="text-white text-sm p-2 font-semibold">User0041 </button>
         <span className="text text-xs text-gray-500 mt-2 mr-4">. Hace un dia</span>
       </div>
      

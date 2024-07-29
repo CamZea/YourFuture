@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { addComunidades,getComunidades } from "../../services/communityservice";
+import user1 from "/src/assets/foro/profiles/user_8872036.png";
+import user2 from "/src/assets/foro/profiles/video-call_9274248.png";
+import user3 from "/src/assets/foro/profiles/doctor_4220231.png";
 export default function CreateCommunity() {
     const [community , setCommunity] = useState([]);
     const [communityInput , setCommunityInput] = useState("");
@@ -71,7 +74,7 @@ const handleSubmitCommunity = async () => {
                       <div className="my-auto ">
                         <img
                           className="w-8 h-8 rounded-xl"
-                          src="/src/assets/foro/profiles/user_8872036.png"
+                          src={user1}
                           class="w-7 h-8"
                           alt=""
                         />
@@ -100,8 +103,8 @@ const handleSubmitCommunity = async () => {
               <li>
               <div className="flex-col">
 
-                  <div class="flex ml-2"><img src="/src/assets/foro/profiles/video-call_9274248.png" class="w-7 h-7" alt=""/><button href="" class="text-white text-sm p-2 font-light">Comunidad Tecnológica </button></div>
-                  <div class="flex ml-2"> <img src="/src/assets/foro/profiles/doctor_4220231.png" class="w-7 h-7" alt=""/><button href="" class="text-white text-sm p-2 font-light">Comunidad de Biomédicas</button></div>
+                  <div class="flex ml-2"><img src={user2} class="w-7 h-7" alt=""/><button href="" class="text-white text-sm p-2 font-light">Comunidad Tecnológica </button></div>
+                  <div class="flex ml-2"> <img src={user3} class="w-7 h-7" alt=""/><button href="" class="text-white text-sm p-2 font-light">Comunidad de Biomédicas</button></div>
                  
                     </div>   
               </li>
