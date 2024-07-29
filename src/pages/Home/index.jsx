@@ -5,6 +5,7 @@ import CienciasBiologicas from "../../assets/imagenes/biologia.jpg";
 import salud from "../../assets/imagenes/medicina.jpg";
 import imgforo from "../../assets/imagenes/foro.jpg";
 import imgorienta from "../../assets/imagenes/orientacion.jpg";
+import universidad from "../../assets/imagenes/universidad2.png"
 
 function Home(){
     return (
@@ -14,7 +15,7 @@ function Home(){
             <div className="p-5">
             <div className="flex flex-col items-center relative ">
               <img
-                src="./src/assets/imagenes/universidad2.png"
+                src={universidad}
                 alt=""
                 className="w-[80%] rounded-md  "
               />
