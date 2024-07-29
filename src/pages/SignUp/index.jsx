@@ -48,7 +48,7 @@ export default function SignUp() {
       onChange={handleInputChange}
       placeholder="Ingrese su nombre"/>
         <input 
-      className=" border px-3 py-2 rounded-md w-full"
+      className=" border mt-4 px-3 py-2 rounded-md w-full"
       type="text"
       name="lastname"
       value={values.lastname}
