@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/imagenes/logo_transparent.png"
 export default function NavBar(props) {
   
   const NavBar = () => {
@@ -18,7 +19,7 @@ export default function NavBar(props) {
       <div className="flex">
        <Link href="#">
          <img
-           src="./src/assets/imagenes/logo_transparent.png"
+           src={logo}
            alt="Logo"
            className="w-[130px] h-auto rounded-full "
          />
