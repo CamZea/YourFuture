@@ -3,7 +3,7 @@ import nosotros from "../../assets/imagenes/nosotros.jpg"
 import { Link } from "react-router-dom";
 import user from "../../assets/imagenes/user.jpg"
 
-
+// Pagina de Nosotros
 function Nosotros() {
     return (
     <>
