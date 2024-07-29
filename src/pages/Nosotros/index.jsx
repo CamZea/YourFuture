@@ -33,10 +33,9 @@ function Nosotros() {
                         </li>
                     </ul>    
             </div>
-            <div className="flex text-[4vh] justify-center  ">
-                <h2 className="text-[#9463C6]">¿Qué somos?</h2>
+            <div className="flex w-full justify-center ">
+                <img className="w-[60%] " src= {nosotros} alt="" />
             </div>
-
             <div className="flex h-[60vh] " >
                 <div className="flex bg-yellow-500 h-[30vh] mt-20 w-[150vh]  
                     text-[3.5vh] text-justify items-center text-white rounded-md" >
@@ -46,9 +45,8 @@ function Nosotros() {
                 </div>
                 <div className="flex items-center w-full h-[39vh] bg-stone-100  ml-4 mt-9">
                     <div className=" flex flex-col  gap-3 p-3 text-justify leading-7 text-[20px] mt-3 items-center  ">
-
                         <p>
-                            Una guía definitiva para explorar el mundo de las carreras y descubrir las oportunidades
+                            Bienvenido a Your Future, tu guía definitiva para explorar el mundo de las carreras y descubrir las oportunidades
                             que te esperan en el futuro. En esta plataforma interactiva, encontrarás información detallada sobre una amplia variedad 
                             de carreras, desde las tradicionales hasta las emergentes en campos innovadores.
                         </p>
@@ -57,24 +55,11 @@ function Nosotros() {
                             profesional. Ya sea que estés en la escuela secundaria, buscando una carrera universitaria o considerando un cambio de rumbo en tu 
                             trayectoria profesional, aquí encontrarás todo lo que necesitas para dar el siguiente paso en tu viaje hacia el éxito.
                         </p>
+                    </div>
                 </div>
-
-            </div>
-            <div className="flex items-center justify-center md:h-[20vh]">
-                <div className="flex  h-[12vh] w-[70%] bg-[#9463C6] my-[20px] rounded-lg items-center justify-center text-white  ">
-                    <p>"Comprometidos en ayudarte a encontrar la elección más idonea para ti"</p>
-                </div>
-            </div>
-            <div className="">
-                <div className="border border-grey-500 flex items-center justify-center p-6 gap-4 flex-col">
-                    <h2>Nuestros Líderes </h2>
-                    <p>Personas comprometidas con el cambio y bienestar de la sociedad</p>
-                </div>
-            </div>
-            <div className="flex w-full h-[70vh] ">
-                <ul className="flex mt-[6vh] gap-[20px] justify-center w-full md:gap-[4vh]">
-
-         
+            </div >
+            <div className="flex w-full h-[50vh] bg-slate-800 ">
+                <ul className="flex mt-[6vh] gap-[30px] justify-center w-full md:gap-[10vh]">
                     <li className="flex flex-col items-center p-15" >
                         <img className="flex  w-[15vh] h-[15vh] rounded-full items-center md:h-[25vh] md:w-[25vh]" src={"src/assets/imagenes/foto-cv.jpg"} width={80} alt=""/>
                         <div className="flex flex-col mt-10 text-[2vh] text-yellow-300 p-2 gap-3  items-center">
@@ -91,11 +76,6 @@ function Nosotros() {
                     </li>
                 </ul>
             </div>
-            <footer>
-                <div className="flex items-center justify-center h-[10vh] bg-black text-white">
-                    <p>© 2021 Your Future. All rights reserved.</p>
-                </div>
-            </footer>
         </main>
       </>
     );
