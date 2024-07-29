@@ -1,10 +1,12 @@
 
 import { useEffect,useState } from "react";
+
 import { getCarriers } from '../../services/getcarriers';
 import { Link } from "react-router-dom";
 // Importar imagenes
 import logo from "../../assets/imagenes/logo_transparent.png";
 import lupa from "../../assets/imagenes/lupa.png";
+
 
 
 function CienciasBiologicas() {
@@ -51,7 +53,7 @@ function CienciasBiologicas() {
             <section>
                 <div>
                     <div className="flex mt-2 mr-4 items-center">
-                        <img src= {logo} width={110}  alt="" />
+                        <img src="src/assets/imagenes/logo_transparent.png" width={110}  alt="" />
                         <ul className="flex w-full h-[50px] gap-4 p-4 bg-black text-white text-sm rounded-lg items-center md:text-sm">
                             <li>
                                 <Link className="hover:underline transition-all ease-in-out duration-300" to={"/home"}>
@@ -80,7 +82,7 @@ function CienciasBiologicas() {
                     </span>
                     <div className="flex gap-[10vh] p-5 w-full ">
                         <div className="flex w-[40%] h-[7vh] ml-6 border border-black-400 text-[12px] rounded-[20px] justify-center ">
-                            <img  className="flex h-4 ml-2 mt-3 "  src={lupa} height={10} width={20} alt= ""/>
+                            <img  className="flex h-4 ml-2 mt-3 "  src="src/assets/imagenes/lupa.png" height={10} width={20} alt= ""/>
                             <input 
                             type ="text" 
                             id="carrier"  
@@ -91,7 +93,7 @@ function CienciasBiologicas() {
                     </div>
                     
                     <div>
-                        <div className="flex bg-cover grid grid-cols-2 gap-6 mx-10 my-6"> 
+                        <div className= "bg-cover grid grid-cols-2 gap-6 mx-10 my-6"> 
                             {carrerafilter.map((carrier) => (
                                 <div className= " relative h-[50vh] mt-[4vh] gap-10 p-4  " key={carrier.id} >
                                     <div className="group relative w-[45vh] overflow-hidden cursor-pointer"> 
@@ -106,6 +108,9 @@ function CienciasBiologicas() {
                                     <div className="h-[10vh] w-[40vh] absolute bottom-[2vh] left-[6vh] backdrop-blur-lg rounded-[20px] md:bottom-[1vh]">
                                         <Link to={`/carreraspregrado/${encodeURIComponent(carrier.name.toLowerCase().replace(/\s+/g, ''))}`}> <h3 className="flex p-4 text-[15px] font-bold text-center">{carrier.name}</h3>
                                         </Link> 
+
+                                    
+
                                     </div>
                                     
                                 </div>

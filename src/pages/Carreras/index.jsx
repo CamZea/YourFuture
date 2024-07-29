@@ -1,11 +1,7 @@
+
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { getCarriers } from '../../services/getcarriers';
-
-import logo from "../../assets/imagenes/logo_transparent.png";
-import lupa from "../../assets/imagenes/lupa.png";
-
-
 
 
 function Carreras() {
@@ -71,7 +67,9 @@ function Carreras() {
             <section>
                 <div>
                     <div className="flex mt-2 mr-4 items-center">
-                        <img src={logo} width={85} alt="" />
+
+            <img src="src/assets/imagenes/logo_transparent.png" width={85}  alt="" />
+
                         <ul className="flex w-full h-[50px] gap-4 p-4 bg-black text-white text-sm rounded-lg items-center md:text-sm">
                             <li>
                                 <Link className="hover:underline transition-all ease-in-out duration-300" to={"/home"}>
@@ -84,7 +82,10 @@ function Carreras() {
                                 </Link>
                             </li>
                             <li>
-                                <Link className="hover:underline transition-all ease-in-out duration-300" to={"/comunidad"}>
+        
+
+                                <Link className="hover:underline transition-all ease-in-out duration-300" to={"/community"}>
+
                                     Comunidad
                                 </Link>
                             </li>
@@ -98,9 +99,13 @@ function Carreras() {
                     <span className="relative p-5 text-[#0EA5E9] text-[5vh] font-bold">       
                         Carreras de Pregrado
                     </span>
-                    <div className="flex gap-[8vh] p-5 w-full">
-                        <div className="flex w-[40%] h-[7vh] ml-6 border border-black-400 text-[12px] rounded-[20px] justify-center">
-                            <img className="flex h-4 ml-2 mt-3" src={lupa} height={10} width={20} alt=""/>
+
+                    
+
+                    <div className="flex gap-[8vh] p-5 w-full ">
+                        <div className="flex w-[40%] h-[7vh] ml-6 border border-black-400 text-[12px] rounded-[20px] justify-center ">
+                            <img className="flex h-4 ml-2 mt-3 " src="src/assets/imagenes/lupa.png" height={10} width={20} alt= ""/>
+
                             <input 
                                 type="text" 
                                 id="carrier"  
@@ -121,10 +126,12 @@ function Carreras() {
                     </div>
                     
                     <div>
+
                         <div className="flex bg-cover grid grid-cols-1 gap-6 mx-5 my-3 md:grid md:grid-cols-4"> 
                             {carrerafilter.map((carrier) => (
                                 <div className="relative h-[50vh] mt-[4vh] gap-10 p-4" key={carrier.id}>
                                     <div className="group relative w-[45vh] overflow-hidden cursor-pointer"> 
+
                                         <div>
                                             <img className="h-[40vh] w-[45vh] flex bg-cover rounded-[15px]" src={carrier.image} alt={carrier.name} />
                                         </div>
@@ -134,9 +141,13 @@ function Carreras() {
                                         </div>
                                     </div>
                                     <div className="h-[10vh] w-[40vh] absolute bottom-[2vh] left-[6vh] backdrop-blur-lg rounded-[20px] md:bottom-[1vh]">
+
                                         <Link to={`/CarrerasPregrado/${encodeURIComponent(carrier.name)}`}> 
                                             <h3 className="flex p-4 text-[15px] font-bold text-center">{carrier.name}</h3>
                                         </Link>
+
+                                          
+
                                     </div>
                                 </div>
                             ))}
